@@ -1,0 +1,16 @@
+<p>Dashboard</p>
+
+<div class="dashboard">
+
+	<div data-ng-controller="HelloJsonController">
+		<p>RESTful call: The ID is {{greeting.id}} and the content is {{greeting.content}}</p>
+	</div>
+	
+    <div data-ng-controller="HeaderController">      	                       	
+        <ul>
+        	<li data-ng-class="{ active: isActive('/dashboard/view1')}"><a href="#/dashboard/view1">View 1</a></li>
+            <li data-ng-class="{ active: isActive('/dashboard/view2')}"><a href="#/dashboard/view2">View 2</a></li>                        
+        </ul>        
+    </div>
+</div>
+    

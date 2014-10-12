@@ -1,0 +1,12 @@
+<div class="container">
+	<h2>View 2</h2>
+	Widget:
+	<br />
+	<input type="text" data-ng-model="filter.name" />
+	<br />
+	<ul>
+		<li>Name - City</li>
+		<li data-ng-repeat="widget in widgets | filter:filter.name"> {{ widget.name }} - {{ widget.desc }} </li>
+	</ul>
+
+</div>
