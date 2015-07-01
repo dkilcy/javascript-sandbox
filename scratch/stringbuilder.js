@@ -30,11 +30,20 @@ StringBuilder.prototype.toString = function ()
 // create a StringBuilder
 var sb = new StringBuilder();
 
-// append some text
-sb.append("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ");
-sb.append("sed diem nonummy nibh euismod tincidunt ut lacreet dolore ");
-sb.append("magna aliguam erat volutpat.");
+var start = new Date();
+var stop = new Date();
+var startTime = start.getTime();
+for(i=0; i < 20000000; i++) {
+    // append some text
+    sb.append("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ");
+    sb.append("sed diem nonummy nibh euismod tincidunt ut lacreet dolore ");
+    sb.append("magna aliguam erat volutpat.");
+}
+var stopTime = stop.getTime();
+console.log( stopTime + " " + startTime + " " + (stopTime - startTime) );
+
 
 // get the full string value
-var s = sb.toString();
+//var s = sb.toString();
+//console.log(s);
 
