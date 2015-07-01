@@ -26,3 +26,15 @@ StringBuilder.prototype.toString = function ()
 {
     return this.strings.join("");
 }
+
+// create a StringBuilder
+var sb = new StringBuilder();
+
+// append some text
+sb.append("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ");
+sb.append("sed diem nonummy nibh euismod tincidunt ut lacreet dolore ");
+sb.append("magna aliguam erat volutpat.");
+
+// get the full string value
+var s = sb.toString();
+
