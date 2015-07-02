@@ -27,21 +27,38 @@ StringBuilder.prototype.toString = function ()
     return this.strings.join("");
 }
 
-// create a StringBuilder
-var sb = new StringBuilder();
+function testStringBuilder() { 
 
-var start = new Date();
-var stop = new Date();
-var startTime = start.getTime();
-for(i=0; i < 20000000; i++) {
-    // append some text
-    sb.append("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ");
-    sb.append("sed diem nonummy nibh euismod tincidunt ut lacreet dolore ");
-    sb.append("magna aliguam erat volutpat.");
+    // create a StringBuilder
+    var sb = new StringBuilder();
+    
+    startTime = new Date().getTime();
+    for(i=0; i < 5000000; i++) {
+        // append some text
+        sb.append("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ");
+        sb.append("sed diem nonummy nibh euismod tincidunt ut lacreet dolore ");
+        sb.append("magna aliguam erat volutpat.");
+    }
+    stopTime = new Date().getTime();
+    console.log( stopTime + " " + startTime + " " + (stopTime - startTime) );
 }
-var stopTime = stop.getTime();
-console.log( stopTime + " " + startTime + " " + (stopTime - startTime) );
 
+testStringBuilder();
+
+function testString() {
+    var s = "";
+    startTime = new Date().getTime();
+
+    for(i=0; i < 5000000; i++) {
+        s += "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ";
+        s += "sed diem nonummy nibh euismod tincidunt ut lacreet dolore ";
+        s += "magna aliguam erat volutpat.";
+    }
+    stopTime = new Date().getTime();
+    console.log( stopTime + " " + startTime + " " + (stopTime - startTime) );
+}
+
+testString();
 
 // get the full string value
 //var s = sb.toString();
